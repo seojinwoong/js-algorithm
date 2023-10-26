@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(day, cars){         
+                let cnt = 0;
+                for (let x of cars) if (x % 10 === day) cnt++;
+                return cnt;
+            }
+            
+            let arr=[12, 20, 54, 30, 87, 91, 30];
+            console.log(solution(0, arr));
+
+        </script>
+    </body>
+</html>

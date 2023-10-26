@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(str){        
+                let answer = "";
+                for (let x of str) {
+                    let changeCode;
+                    if (x.charCodeAt() >= 65 && x.charCodeAt() <= 90) changeCode = x.charCodeAt() + 32;
+                    else changeCode = x.charCodeAt() - 32;
+
+                    answer += String.fromCharCode(changeCode);
+                }
+                return answer;
+            }
+            
+            console.log(solution("azisTimeToStudy"));
+        </script>
+    </body>
+</html>
