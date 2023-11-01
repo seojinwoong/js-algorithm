@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(words){   
+                let answer;
+
+                answer = words.filter((v, i) => {
+                    return words.indexOf(v) === i;
+                });
+
+                return answer;
+            }
+
+            
+            let arr = ['good', 'time', 'GOOD', 'time', 'student'];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>

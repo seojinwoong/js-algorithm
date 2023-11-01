@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(students){         
+                let result = 0, maxH = Number.MIN_SAFE_INTEGER;
+
+                for (let x of students) {
+                    if (x > maxH) {
+                        result++;
+                        maxH = x;
+                    }
+                }
+                return result;
+            }
+
+            console.log(solution([130, 135, 148, 140, 145, 150, 150, 153]));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(players, callings){        
+                let maps = {};
+
+                for (let i=0; i<players.length; i++) {
+                    maps[players[i]] = i;
+                }
+             
+                console.log('maps', maps);
+
+                callings.forEach(v => {
+                    let num = maps[v];
+                    let temp = players[num - 1];
+                    players[num-1] = v;
+                    players[num] = temp;
+                    maps[v]--;
+                    maps[players[num]]++;
+                });
+
+                return maps
+            }
+            
+            console.log(solution(["mumu", "soe", "poe", "kai", "mine"], ["kai", "kai", "mine", "mine"]));
+        </script>
+    </body>
+</html>
