@@ -6,18 +6,20 @@
     <body>
         <script>
             function solution(score){        
-                let bonus = 0, sum = 0;
+                let result = [];
+                for (let i=0; i<score.length; i++) {
+                    let number = 1;
+                    for (let j=0; j<score.length; j++) {
+                        if (i === j) continue;
 
-                for (let x of score) {
-                    if (x === 0) bonus = 0;
-                    else bonus++;
-                    sum += bonus;
+                        if (score[i] < score[j]) number++;
+                    }
+                    result.push(number);
                 }
-
-                return sum
+                return result
             }
             
-            console.log(solution([1,0,1,1,1,0,0,1,1,0]))
+            console.log(solution([87, 89, 92, 100, 76]))
         </script>
     </body>
 </html>
